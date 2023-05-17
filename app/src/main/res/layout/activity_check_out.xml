@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/forum"
-        android:text="Check Out"
+        android:text="Check Out--Joker Testing"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
