@@ -4,15 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/BgImage"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageButton
+        android:id="@+id/buttonToOrder"
+        android:layout_width="167dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="360dp"
+        android:background="#220901"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/logo"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="52dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logoo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

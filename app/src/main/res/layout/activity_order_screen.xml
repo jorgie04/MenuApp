@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/Menu"
+    tools:context=".order_Screen">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="266dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/forum"
+        android:text="@string/main_course"
+        android:textColor="@color/yellow"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/drinks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00220901"
+        app:srcCompat="@drawable/buttonDrinks"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="662dp"
+        android:contentDescription="@string/todo" />
+
+    <ImageButton
+        android:id="@+id/checkOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00DAD2CF"
+        android:minHeight="48dp"
+        app:srcCompat="@drawable/checkOut"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintBounds"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="757dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

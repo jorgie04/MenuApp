@@ -5,31 +5,31 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
+public class order_Screen extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity {
-
-     ImageButton buttonToOrder;
+    ImageButton drinks;
+    ImageButton checkOut;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_order_screen);
 
         // To hide action bar
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
 
-        buttonToOrder = findViewById(R.id.buttonToOrder);
-        buttonToOrder.setOnClickListener(new View.OnClickListener() {
+        drinks = findViewById(R.id.drinks);
+        drinks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent=new Intent(MainActivity.this,order_Screen.class);
+                Intent intent=new Intent(order_Screen.this,drinks_screen.class);
                 startActivity(intent);
             }
         });
+
     }
 }
