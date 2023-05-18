@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/drinksBG"
+    android:background="@drawable/drinks_background"
     tools:context=".drinks_screen">
 
 
@@ -12,7 +12,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="44dp"
         android:fontFamily="@font/forum"
         android:text="Drinks"
         android:textColor="@color/yellow"
@@ -25,18 +25,23 @@
         android:id="@+id/mainButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:background="#00FFFFFF"
-        app:srcCompat="@drawable/mainButton"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="610dp" />
+        app:layout_constraintBottom_toTopOf="@+id/checkOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/main_button" />
 
     <ImageButton
         android:id="@+id/checkOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
         android:background="#00FFFFFF"
-        app:srcCompat="@drawable/checkOut"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="700dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/check_out" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/BgImage"
+    android:background="@drawable/background_image"
     tools:context=".MainActivity">
 
     <ImageButton
         android:id="@+id/buttonToOrder"
         android:layout_width="167dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="360dp"
+        android:layout_marginTop="180dp"
         android:background="#220901"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/logo"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/order_button"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageView
@@ -30,7 +31,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoo" />
+        app:srcCompat="@drawable/logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -21,14 +21,20 @@ public class order_Screen extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
+        // To go to Drinks Screen
         drinks = findViewById(R.id.drinks);
-        drinks.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        drinks.setOnClickListener(view -> {
 
-                Intent intent=new Intent(order_Screen.this,drinks_screen.class);
-                startActivity(intent);
-            }
+            Intent intent=new Intent(order_Screen.this,drinks_screen.class);
+            startActivity(intent);
+        });
+
+        // To go to Check out Screen
+        checkOut = findViewById(R.id.checkOut);
+        checkOut.setOnClickListener(view -> {
+
+            Intent intent=new Intent(order_Screen.this, check_out.class);
+            startActivity(intent);
         });
 
     }

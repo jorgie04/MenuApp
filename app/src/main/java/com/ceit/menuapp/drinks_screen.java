@@ -21,15 +21,20 @@ public class drinks_screen extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
+        // To go to Main Course screen
         mainButton = findViewById(R.id.mainButton);
-        mainButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        mainButton.setOnClickListener(view -> {
 
-                Intent intent=new Intent(drinks_screen.this,MainActivity.class);
-                startActivity(intent);
-            }
+            Intent intent=new Intent(drinks_screen.this,order_Screen.class);
+            startActivity(intent);
         });
 
+        // To go to Check out screen
+        checkOut = findViewById(R.id.checkOut);
+        checkOut.setOnClickListener(view -> {
+
+            Intent intent=new Intent(drinks_screen.this,check_out.class);
+            startActivity(intent);
+        });
     }
 }

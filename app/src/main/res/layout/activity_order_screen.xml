@@ -4,9 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/Menu"
+    android:background="@drawable/menu_background"
     tools:context=".order_Screen">
 
+
+    <app.num.numandroidpagecurleffect.PageCurlView
+        android:id="@+id/pagecurlView"
+        android:layout_width="430dp"
+        android:layout_height="484dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/drinks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.074">
+
+    </app.num.numandroidpagecurleffect.PageCurlView>
 
     <TextView
         android:id="@+id/textView"
@@ -26,21 +39,26 @@
         android:id="@+id/drinks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:background="#00220901"
-        app:srcCompat="@drawable/buttonDrinks"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="662dp"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/checkOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/drink_button"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/checkOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
         android:background="#00DAD2CF"
         android:minHeight="48dp"
-        app:srcCompat="@drawable/checkOut"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintBounds"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="757dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/check_out"
+        tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,VisualLintBounds" />
 </androidx.constraintlayout.widget.ConstraintLayout>
