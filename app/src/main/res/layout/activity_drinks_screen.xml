@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/forum"
-        android:text="Drinks"
+        android:text="@string/drinks"
         android:textColor="@color/yellow"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +30,8 @@
         app:layout_constraintBottom_toTopOf="@+id/checkOut"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/main_button" />
+        app:srcCompat="@drawable/main_button"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/checkOut"
@@ -38,10 +39,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:background="#00FFFFFF"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/check_out" />
+        app:srcCompat="@drawable/check_out"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

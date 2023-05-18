@@ -59,5 +59,4 @@
         tools:ignore="ContentDescription,SpeakableTextPresentCheck"
         android:contentDescription="@string/butoon" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
