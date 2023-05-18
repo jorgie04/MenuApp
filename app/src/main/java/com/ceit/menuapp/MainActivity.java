@@ -18,6 +18,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,13 +57,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         buttonToOrder = findViewById(R.id.buttonToOrder);
-        buttonToOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        buttonToOrder.setOnClickListener(view -> {
 
                 Intent intent=new Intent(MainActivity.this,order_Screen.class);
                 startActivity(intent);
-            }
         });
     }
 }

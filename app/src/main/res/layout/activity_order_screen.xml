@@ -4,9 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/Menu"
+    android:background="@drawable/menu_background"
     tools:context=".order_Screen">
 
+    <app.num.numandroidpagecurleffect.PageCurlView
+        android:id="@+id/pagecurlView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="46dp"
+        app:layout_constraintBottom_toTopOf="@+id/drinks_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"></app.num.numandroidpagecurleffect.PageCurlView>
 
     <TextView
         android:id="@+id/textView"
@@ -20,27 +32,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextSizeCheck" />
+        tools:ignore="MissingConstraints,TextSizeCheck" />
 
     <ImageButton
-        android:id="@+id/drinks"
+        android:id="@+id/checkout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#00220901"
-        app:srcCompat="@drawable/buttonDrinks"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="662dp"
-        android:contentDescription="@string/todo" />
-
-    <ImageButton
-        android:id="@+id/checkOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00DAD2CF"
+        android:layout_marginBottom="40dp"
+        android:background="#00FFFFFF"
         android:minHeight="48dp"
-        app:srcCompat="@drawable/checkOut"
-        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,VisualLintBounds"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="757dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/check_out"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck"
+        android:contentDescription="@string/button" />
+
+    <ImageButton
+        android:id="@+id/drinks_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/checkout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/drink_button"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
