@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "647510530585",
+    "project_id": "menu-app-1343c",
+    "storage_bucket": "menu-app-1343c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647510530585:android:ed5b66e46cafc460cbe888",
+        "android_client_info": {
+          "package_name": "com.ceit.menuapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647510530585-os8c5ouu3u72rogqme5khl0p9o7i9m77.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO5OTyyQCA1AaD5-dUqnDhJ3vgvZRJteU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647510530585-os8c5ouu3u72rogqme5khl0p9o7i9m77.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
