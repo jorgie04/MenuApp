@@ -7,18 +7,34 @@
     android:background="@drawable/menu_background"
     tools:context=".order_Screen">
 
-    <app.num.numandroidpagecurleffect.PageCurlView
-        android:id="@+id/pagecurlView"
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="46dp"
+        app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/drinks_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"></app.num.numandroidpagecurleffect.PageCurlView>
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="0dp">
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginBottom="44dp"
+            app:iss_auto_cycle="true"
+            app:iss_corner_radius="40"
+            app:iss_delay="1000"
+            app:iss_no_dots="true"
+            app:iss_period="1000"
+            app:iss_text_align="CENTER"
+            app:iss_text_color="#FFFFAA1C"
+            app:layout_constraintBottom_toTopOf="@+id/drinks_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        </com.denzcoskun.imageslider.ImageSlider>
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/textView"
@@ -54,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:background="#00FFFFFF"
+        android:background="#00621708"
         app:layout_constraintBottom_toTopOf="@+id/checkout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

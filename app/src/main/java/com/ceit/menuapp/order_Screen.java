@@ -4,19 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.constants.AnimationTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import java.util.ArrayList;
-import java.util.List;
-
-import app.num.numandroidpagecurleffect.PageCurlView;
 
 public class order_Screen extends AppCompatActivity {
 
     ImageButton drinks;
     ImageButton checkOut;
-    PageCurlView pageCurlView;
-    List<Integer> dishes;
+    ImageSlider dishes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,15 +26,24 @@ public class order_Screen extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
-        pageCurlView = findViewById(R.id.pagecurlView);
-        dishes= new ArrayList<>();
+        // dishes
+        dishes = findViewById(R.id.image_slider);
+        ArrayList<SlideModel> dish = new ArrayList<>();
 
-        dishes.add(R.drawable.dish_one); // First Dish
-        dishes.add(R.drawable.dish_two); // Second Dish
-        dishes.add(R.drawable.dish_three); // Third Dish
+        dish.add(new SlideModel(R.drawable.dish_one, "Grilled Chicken..........175",ScaleTypes.FIT));
+        dish.add(new SlideModel(R.drawable.fried_chicken, "Fried Chicken..........150",ScaleTypes.FIT));
+        dish.add(new SlideModel(R.drawable.chicken_adobo, "Chicken Adobo..........180",ScaleTypes.FIT));
+        dish.add(new SlideModel(R.drawable.dish_two, "Grilled Pork..........250",ScaleTypes.FIT));
+        dish.add(new SlideModel(R.drawable.pork_chop, "Porkchop..........300",ScaleTypes.FIT));
+        dish.add(new SlideModel(R.drawable.lechon_kawali, "Lechon Kawali..........125",ScaleTypes.FIT));
+        dish.add(new SlideModel(R.drawable.grilled_steak, "Grilled Steak..........350",ScaleTypes.FIT));
+        dish.add(new SlideModel(R.drawable.dish_three, "Beef Fillet..........200",ScaleTypes.FIT));
+        dish.add(new SlideModel(R.drawable.corned_beef, "Corned Beef..........250",ScaleTypes.FIT));
 
-        pageCurlView.setCurlView(dishes);
-        pageCurlView.setCurlSpeed(600);
+        dishes.setImageList(dish, ScaleTypes.CENTER_CROP);
+        dishes.setSlideAnimation(AnimationTypes.GATE);
+        dishes.startSliding(3000); // 3 seconds before sliding to next slide
+        dishes.stopSliding();
 
         // To go to Drinks Screen
         drinks = findViewById(R.id.drinks_button);
@@ -52,6 +60,5 @@ public class order_Screen extends AppCompatActivity {
             Intent intent=new Intent(order_Screen.this, check_out.class);
             startActivity(intent);
         });
-
     }
 }

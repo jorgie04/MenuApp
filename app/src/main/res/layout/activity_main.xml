@@ -12,13 +12,13 @@
         android:layout_width="167dp"
         android:layout_height="60dp"
         android:layout_marginTop="180dp"
-        android:background="#220901"
+        android:background="#00220901"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/order_button"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+        tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/imageView"
