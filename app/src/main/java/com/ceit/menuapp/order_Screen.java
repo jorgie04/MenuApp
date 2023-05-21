@@ -8,12 +8,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import java.util.ArrayList;
+
 public class order_Screen extends AppCompatActivity {
 
     ImageButton drinks;
     ImageButton checkOut;
 
     ViewPager viewpager;
+    private ArrayList<String> orderDishes = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,22 +30,21 @@ public class order_Screen extends AppCompatActivity {
 
         // View image "Adapter_for_Dish"
         viewpager = findViewById(R.id.viewPager);
-        Adapter_for_Dish adapter = new Adapter_for_Dish(this);
+        Adapter_for_Dish adapter = new Adapter_for_Dish(this, orderDishes);
         viewpager.setAdapter(adapter);
 
         // To go to Drinks Screen
         drinks = findViewById(R.id.drinks_button);
         drinks.setOnClickListener(view -> {
-
-            Intent intent=new Intent(order_Screen.this,drinks_screen.class);
+            Intent intent = new Intent(order_Screen.this, drinks_screen.class);
             startActivity(intent);
         });
 
         // To go to Check out Screen
         checkOut = findViewById(R.id.checkout);
         checkOut.setOnClickListener(view -> {
-
-            Intent intent=new Intent(order_Screen.this, check_out.class);
+            Intent intent = new Intent(order_Screen.this, check_out.class);
+            intent.putStringArrayListExtra("orderDishes", orderDishes);
             startActivity(intent);
         });
     }

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class Adapter_for_Dish extends PagerAdapter {
     private Context context;
     private LayoutInflater layoutInflater;
-    private Integer [] images = {
+    private Integer[] images = {
             R.drawable.dish_one,
             R.drawable.fried_chicken,
             R.drawable.chicken_adobo,
@@ -27,9 +27,11 @@ public class Adapter_for_Dish extends PagerAdapter {
             R.drawable.corned_beef
     };
 
-    public Adapter_for_Dish(Context context){
+    private ArrayList<String> orderDishes;
 
+    public Adapter_for_Dish(Context context, ArrayList<String> orderDishes) {
         this.context = context;
+        this.orderDishes = orderDishes;
     }
 
     @Override
@@ -42,60 +44,56 @@ public class Adapter_for_Dish extends PagerAdapter {
         return view == object;
     }
 
-    private ArrayList<String> order_dishes = new ArrayList<>();
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.custom_layout_for_dish, null);
-        ImageView imageView = (ImageView) view.findViewById(R.id.imageView_dish);
+        ImageView imageView = view.findViewById(R.id.imageView_dish);
         imageView.setImageResource(images[position]);
 
-        // Image clickable
-        view.setOnClickListener(new View.OnClickListener() {
+        view.setOnClickListener(view1 -> {
             String new_order;
-            @Override
-            public void onClick(View view) {
-                if (position == 0){
-                    new_order = "1";
-                } else if (position == 1) {
-                    new_order = "2";
-                } else if (position == 2) {
-                    new_order = "3";
-                } else if (position == 3) {
-                    new_order = "4";
-                } else if (position == 4) {
-                    new_order = "5";
-                } else if (position == 5) {
-                    new_order = "6";
-                } else if (position == 6) {
-                    new_order = "7";
-                } else if (position == 7) {
-                    new_order = "8";
-                } else if (position == 8) {
-                    new_order = "9";
-                }
-
-                Toast.makeText(context, "Added to cart", Toast.LENGTH_SHORT).show();
-
-                order_dishes.add(new_order);
-                for (String str : order_dishes) {
-                    System.out.println(str);
-                }
+            if (position == 0) {
+                new_order = "1";
+            } else if (position == 1) {
+                new_order = "2";
+            } else if (position == 2) {
+                new_order = "3";
+            } else if (position == 3) {
+                new_order = "4";
+            } else if (position == 4) {
+                new_order = "5";
+            } else if (position == 5) {
+                new_order = "6";
+            } else if (position == 6) {
+                new_order = "7";
+            } else if (position == 7) {
+                new_order = "8";
+            } else if (position == 8) {
+                new_order = "9";
+            } else {
+                new_order = "";
             }
 
+            if (!new_order.isEmpty()) {
+                Toast.makeText(context, "Added to cart", Toast.LENGTH_SHORT).show();
+                orderDishes.add(new_order);
+            }
         });
 
-        ViewPager viewpage =(ViewPager) container;
-        viewpage.addView(view, 0);
+        ViewPager viewPager = (ViewPager) container;
+        viewPager.addView(view, 0);
         return view;
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-
-        ViewPager viewpage = (ViewPager) container;
+        ViewPager viewPager = (ViewPager) container;
         View view = (View) object;
-        viewpage.removeView(view);
+        viewPager.removeView(view);
+    }
+
+    public ArrayList<String> getOrderDishes() {
+        return orderDishes;
     }
 }
