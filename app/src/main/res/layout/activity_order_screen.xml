@@ -7,45 +7,32 @@
     android:background="@drawable/menu_background"
     tools:context=".order_Screen">
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        app:cardCornerRadius="20dp"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="385dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintBottom_toTopOf="@+id/drinks_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintVertical_bias="0.134"
+        tools:ignore="SpeakableTextPresentCheck">
 
-        <com.denzcoskun.imageslider.ImageSlider
-            android:id="@+id/image_slider"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginBottom="44dp"
-            app:iss_auto_cycle="true"
-            app:iss_corner_radius="40"
-            app:iss_delay="1000"
-            app:iss_no_dots="true"
-            app:iss_period="1000"
-            app:iss_text_align="CENTER"
-            app:iss_text_color="#FFFFAA1C"
-            app:layout_constraintBottom_toTopOf="@+id/drinks_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        </com.denzcoskun.imageslider.ImageSlider>
-    </androidx.cardview.widget.CardView>
+    </androidx.viewpager.widget.ViewPager>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="266dp"
-        android:layout_height="66dp"
+        android:layout_width="259dp"
+        android:layout_height="72dp"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/forum"
         android:text="@string/main_course"
         android:textColor="@color/yellow"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,TextSizeCheck" />

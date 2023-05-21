@@ -40,5 +40,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:17.0.4'
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
-    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.2'
+
 }
