@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import java.util.ArrayList;
+
 public class Adapter_for_Dish extends PagerAdapter {
     private Context context;
     private LayoutInflater layoutInflater;
@@ -40,7 +42,7 @@ public class Adapter_for_Dish extends PagerAdapter {
         return view == object;
     }
 
-
+    private ArrayList<String> order_dishes = new ArrayList<>();
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
@@ -51,16 +53,37 @@ public class Adapter_for_Dish extends PagerAdapter {
 
         // Image clickable
         view.setOnClickListener(new View.OnClickListener() {
+            String new_order;
             @Override
             public void onClick(View view) {
-
                 if (position == 0){
-                    Toast.makeText(context, "PAGOD", Toast.LENGTH_SHORT).show();
+                    new_order = "1";
                 } else if (position == 1) {
-                    Toast.makeText(context, "NA", Toast.LENGTH_SHORT).show();
-                } else
-                    Toast.makeText(context, "AKO", Toast.LENGTH_SHORT).show();
+                    new_order = "2";
+                } else if (position == 2) {
+                    new_order = "3";
+                } else if (position == 3) {
+                    new_order = "4";
+                } else if (position == 4) {
+                    new_order = "5";
+                } else if (position == 5) {
+                    new_order = "6";
+                } else if (position == 6) {
+                    new_order = "7";
+                } else if (position == 7) {
+                    new_order = "8";
+                } else if (position == 8) {
+                    new_order = "9";
+                }
+
+                Toast.makeText(context, "Added to cart", Toast.LENGTH_SHORT).show();
+
+                order_dishes.add(new_order);
+                for (String str : order_dishes) {
+                    System.out.println(str);
+                }
             }
+
         });
 
         ViewPager viewpage =(ViewPager) container;
