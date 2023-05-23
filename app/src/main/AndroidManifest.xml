@@ -16,9 +16,6 @@
             android:name=".check_out"
             android:exported="false" />
         <activity
-            android:name=".drinks_screen"
-            android:exported="false" />
-        <activity
             android:name=".order_Screen"
             android:exported="false" />
         <activity

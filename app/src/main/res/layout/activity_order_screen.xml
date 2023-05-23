@@ -12,18 +12,16 @@
         android:layout_width="385dp"
         android:layout_height="430dp"
         android:layout_marginTop="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/drinks_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.134"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         tools:ignore="SpeakableTextPresentCheck">
 
     </androidx.viewpager.widget.ViewPager>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/title"
         android:layout_width="259dp"
         android:layout_height="72dp"
         android:layout_marginTop="44dp"
@@ -39,29 +37,20 @@
 
     <ImageButton
         android:id="@+id/checkout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_width="179dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="72dp"
         android:background="#00FFFFFF"
+        android:contentDescription="@string/button"
         android:minHeight="48dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager"
+        app:layout_constraintVertical_bias="0.818"
         app:srcCompat="@drawable/check_out"
-        tools:ignore="ContentDescription,SpeakableTextPresentCheck"
-        android:contentDescription="@string/button" />
-
-    <ImageButton
-        android:id="@+id/drinks_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:background="#00621708"
-        app:layout_constraintBottom_toTopOf="@+id/checkout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/drink_button"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,21 +10,30 @@ import android.widget.Toast;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+
 import java.util.ArrayList;
 
 public class Adapter_for_Dish extends PagerAdapter {
     private Context context;
     private LayoutInflater layoutInflater;
     private Integer[] images = {
-            R.drawable.dish_one,
+            // Dishes
+            R.drawable.grilled_chicken,
             R.drawable.fried_chicken,
             R.drawable.chicken_adobo,
-            R.drawable.dish_two,
-            R.drawable.pork_chop,
+            R.drawable.grilled_pork,
+            R.drawable.porkchop,
             R.drawable.lechon_kawali,
             R.drawable.grilled_steak,
-            R.drawable.dish_three,
-            R.drawable.corned_beef
+            R.drawable.beef_fillet,
+            R.drawable.corned_beef,
+            // Drinks
+            R.drawable.deakin,
+            R.drawable.matua,
+            R.drawable.codorniu,
+            R.drawable.coca_cola,
+            R.drawable.fanta,
+            R.drawable.pepsi
     };
 
     private ArrayList<String> orderDishes;
@@ -38,6 +47,7 @@ public class Adapter_for_Dish extends PagerAdapter {
     public int getCount() {
         return images.length;
     }
+
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
@@ -71,6 +81,18 @@ public class Adapter_for_Dish extends PagerAdapter {
                 new_order = "8";
             } else if (position == 8) {
                 new_order = "9";
+            } else if (position == 9) {
+                new_order = "10";
+            } else if (position == 10) {
+                new_order = "11";
+            } else if (position == 11) {
+                new_order = "12";
+            } else if (position == 12) {
+                new_order = "13";
+            } else if (position == 13) {
+                new_order = "14";
+            } else if (position == 14) {
+                new_order = "15";
             } else {
                 new_order = "";
             }

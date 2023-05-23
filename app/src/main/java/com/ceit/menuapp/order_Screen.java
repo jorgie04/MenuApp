@@ -7,14 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class order_Screen extends AppCompatActivity {
 
-    ImageButton drinks;
     ImageButton checkOut;
-
     ViewPager viewpager;
     private ArrayList<String> orderDishes = new ArrayList<>();
 
@@ -33,12 +32,6 @@ public class order_Screen extends AppCompatActivity {
         Adapter_for_Dish adapter = new Adapter_for_Dish(this, orderDishes);
         viewpager.setAdapter(adapter);
 
-        // To go to Drinks Screen
-        drinks = findViewById(R.id.drinks_button);
-        drinks.setOnClickListener(view -> {
-            Intent intent = new Intent(order_Screen.this, drinks_screen.class);
-            startActivity(intent);
-        });
 
         // To go to Check out Screen
         checkOut = findViewById(R.id.checkout);

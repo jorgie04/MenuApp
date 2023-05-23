@@ -44,7 +44,7 @@ public class check_out extends AppCompatActivity {
 
         backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(view -> {
-            Intent intent = new Intent(check_out.this, drinks_screen.class);
+            Intent intent = new Intent(check_out.this, order_Screen.class);
             startActivity(intent);
         });
 
@@ -79,12 +79,12 @@ public class check_out extends AppCompatActivity {
             firestore.collection("orders").add(orders).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                 @Override
                 public void onSuccess(DocumentReference documentReference) {
-                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
                 }
             });
 
