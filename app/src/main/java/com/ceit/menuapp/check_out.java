@@ -60,6 +60,9 @@ public class check_out extends AppCompatActivity {
         confirmButton.setOnClickListener(view -> {
             // Handle confirm button click
 
+            Intent nextIntent=new Intent(check_out.this, OrderConfirmed.class);
+            startActivity(nextIntent);
+
             firestore = FirebaseFirestore.getInstance();
 
             Intent intent = getIntent();
@@ -91,7 +94,6 @@ public class check_out extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
                 }
             });
-
 
         });
 
