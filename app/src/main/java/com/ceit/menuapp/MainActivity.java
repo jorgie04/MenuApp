@@ -23,33 +23,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    FirebaseFirestore firestore;
-
      ImageButton buttonToOrder;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        firestore = FirebaseFirestore.getInstance();
-
-        Map<String, Object> users =  new HashMap<>();
-        users.put("description", "JOKER");
-        users.put("firstname", "NIYO");
-        users.put("idk", "PAGOD");
-        users.put("rawr", "NA");
-
-        firestore.collection("users").add(users).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-            @Override
-            public void onSuccess(DocumentReference documentReference) {
-                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_LONG).show();
-            }
-        });
 
         // To hide action bar
         if (getSupportActionBar() != null) {
