@@ -30,6 +30,8 @@ public class check_out extends AppCompatActivity {
     EditText customerAddress;
     EditText customerContact;
 
+    TextView totalAmount;
+
     FirebaseFirestore firestore;
 
     @Override
@@ -52,6 +54,8 @@ public class check_out extends AppCompatActivity {
         customerAddress = findViewById(R.id.editTextCustomerAddress);
         customerContact = findViewById(R.id.editTextCustomerContact);
 
+        totalAmount = findViewById(R.id.totalAmount);
+
         confirmButton = findViewById(R.id.confirmButton);
         confirmButton.setOnClickListener(view -> {
             // Handle confirm button click
@@ -67,7 +71,7 @@ public class check_out extends AppCompatActivity {
             if (orderDishes != null) {
                 StringBuilder stringBuilder = new StringBuilder();
                 for (String dish : orderDishes) {
-                    stringBuilder.append("Dish ").append(dish).append(", ");
+                    stringBuilder.append(dish).append(", ");
                 }
                 orders.put("items", stringBuilder.toString());
             }
@@ -99,9 +103,28 @@ public class check_out extends AppCompatActivity {
         if (orderDishes != null) {
             StringBuilder stringBuilder = new StringBuilder();
             for (String dish : orderDishes) {
-                stringBuilder.append("Dish ").append(dish).append("\n");
+                stringBuilder.append(dish).append("\n");
             }
             orderDetails.setText(stringBuilder.toString());
         }
+
+        int total = 0;
+
+        for (String dish : orderDishes) {
+            if (dish.equals("Grilled Chicken")) {
+                total += 175;
+            } else if (dish.equals("Fried Chicken")) {
+                total += 150;
+            } else if (dish.equals("Chicken Adobo")) {
+                total += 180;
+            }
+            // Add more conditions for other dishes if needed
+        }
+
+        String totalText = "Total: ";
+        String totalInt = Integer.toString(total);
+        String returnText = totalText + totalInt;
+
+        totalAmount.setText(returnText);
     }
 }

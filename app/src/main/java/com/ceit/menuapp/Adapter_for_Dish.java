@@ -64,35 +64,35 @@ public class Adapter_for_Dish extends PagerAdapter {
         view.setOnClickListener(view1 -> {
             String new_order;
             if (position == 0) {
-                new_order = "1";
+                new_order = "Grilled Chicken";
             } else if (position == 1) {
-                new_order = "2";
+                new_order = "Fried Chicken";
             } else if (position == 2) {
-                new_order = "3";
+                new_order = "Chicken Adobo";
             } else if (position == 3) {
-                new_order = "4";
+                new_order = "Grilled Pork";
             } else if (position == 4) {
-                new_order = "5";
+                new_order = "Porkchop";
             } else if (position == 5) {
-                new_order = "6";
+                new_order = "Lechon Kawali";
             } else if (position == 6) {
-                new_order = "7";
+                new_order = "Grilled Steak";
             } else if (position == 7) {
-                new_order = "8";
+                new_order = "Beef Fillet";
             } else if (position == 8) {
-                new_order = "9";
+                new_order = "Corned Beef";
             } else if (position == 9) {
-                new_order = "10";
+                new_order = "Deakin";
             } else if (position == 10) {
-                new_order = "11";
+                new_order = "Matus";
             } else if (position == 11) {
-                new_order = "12";
+                new_order = "Codorniu";
             } else if (position == 12) {
-                new_order = "13";
+                new_order = "Coca Cola";
             } else if (position == 13) {
-                new_order = "14";
+                new_order = "Fanta";
             } else if (position == 14) {
-                new_order = "15";
+                new_order = "Pepsi";
             } else {
                 new_order = "";
             }

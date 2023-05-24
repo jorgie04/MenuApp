@@ -32,6 +32,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/forum"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:text="Total:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderDetails"/>
+
     <EditText
         android:id="@+id/editTextCustomerName"
         android:layout_width="match_parent"
@@ -39,7 +52,7 @@
         android:layout_marginTop="290dp"
         android:hint="Customer Name"
         android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/orderDetails" />
+        app:layout_constraintTop_toBottomOf="@id/totalAmount" />
 
     <EditText
         android:id="@+id/editTextCustomerAddress"
