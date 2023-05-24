@@ -7,48 +7,47 @@
     android:background="@drawable/menu_background"
     tools:context=".order_Screen">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="385dp"
-        android:layout_height="430dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        tools:ignore="SpeakableTextPresentCheck">
-
-    </androidx.viewpager.widget.ViewPager>
-
     <TextView
         android:id="@+id/title"
-        android:layout_width="259dp"
-        android:layout_height="150dp"
+        android:layout_width="230dp"
+        android:layout_height="104dp"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/forum"
-        android:text="Order Confirmed!"
+        android:text="Order Confirmed"
+        android:textAlignment="center"
         android:textColor="@color/yellow"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,TextSizeCheck" />
+        tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck" />
 
-    <Button
-        android:id="@+id/home"
-        android:layout_width="179dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="72dp"
-        android:background="@color/black"
-        android:contentDescription="@string/button"
-        android:minHeight="48dp"
-        android:text="Home"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:fontFamily="@font/forum"
+        android:text="@string/thank_you_for_ordering"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager"
-        app:layout_constraintVertical_bias="0.818"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_button"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,7 @@
         android:layout_marginTop="44dp"
         android:fontFamily="@font/forum"
         android:text="@string/check_out"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +28,8 @@
         android:layout_marginTop="100dp"
         android:fontFamily="@font/forum"
         android:textColor="@color/white"
-        android:textSize="50sp"
+        android:textSize="30sp"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,41 +38,60 @@
         android:id="@+id/totalAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="408dp"
         android:fontFamily="@font/forum"
+        android:text="@string/total"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="50sp"
-        android:text="Total:"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/orderDetails"/>
+        app:layout_constraintTop_toBottomOf="@id/orderDetails" />
 
     <EditText
         android:id="@+id/editTextCustomerName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
-        android:hint="Customer Name"
+        android:layout_width="323dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/customer_name"
         android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/totalAmount" />
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalAmount"
+        tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/editTextCustomerAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="323dp"
+        android:layout_height="44dp"
         android:layout_marginTop="16dp"
-        android:hint="Customer Address"
+        android:hint="@string/customer_address"
         android:inputType="textPostalAddress"
-        app:layout_constraintTop_toBottomOf="@id/editTextCustomerName" />
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextCustomerName"
+        tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/editTextCustomerContact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="323dp"
+        android:layout_height="44dp"
         android:layout_marginTop="16dp"
-        android:hint="Customer Contact"
+        android:hint="@string/customer_contact"
         android:inputType="phone"
-        app:layout_constraintTop_toBottomOf="@id/editTextCustomerAddress" />
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextCustomerAddress"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
 
     <ImageButton
         android:id="@+id/backButton"

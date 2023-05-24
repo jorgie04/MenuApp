@@ -84,7 +84,7 @@ public class Adapter_for_Dish extends PagerAdapter {
             } else if (position == 9) {
                 new_order = "Deakin";
             } else if (position == 10) {
-                new_order = "Matus";
+                new_order = "Matua";
             } else if (position == 11) {
                 new_order = "Codorniu";
             } else if (position == 12) {

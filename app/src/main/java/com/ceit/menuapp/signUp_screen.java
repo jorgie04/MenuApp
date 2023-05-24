@@ -5,23 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
-public class OrderConfirmed extends AppCompatActivity {
+public class signUp_screen extends AppCompatActivity {
 
-    ImageButton homeButton;
-
+    ImageButton signUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_order_confirmed);
+        setContentView(R.layout.activity_sign_up_screen);
 
-        homeButton = findViewById(R.id.homeButton);
-        homeButton.setOnClickListener(new View.OnClickListener() {
+        signUp = findViewById(R.id.signUp_Button);
+        signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OrderConfirmed.this, order_Screen.class);
+                Intent intent = new Intent(signUp_screen.this, Login_screen.class);
                 startActivity(intent);
             }
         });

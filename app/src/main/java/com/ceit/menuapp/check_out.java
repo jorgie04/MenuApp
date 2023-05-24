@@ -119,8 +119,32 @@ public class check_out extends AppCompatActivity {
                 total += 150;
             } else if (dish.equals("Chicken Adobo")) {
                 total += 180;
+            } else if (dish.equals("Grilled Pork")) {
+                total += 250;
+            } else if (dish.equals("Porkchop")) {
+                total += 300;
+            } else if (dish.equals("Lechon Kawali")) {
+                total += 125;
+            } else if (dish.equals("Grilled Steak")) {
+                total += 350;
+            } else if (dish.equals("Beef Fillet")) {
+                total += 200;
+            } else if (dish.equals("Corned Beef")) {
+                total += 250;
+            } else if (dish.equals("Deakin")) {
+                total += 575;
+            } else if (dish.equals("Matua")) {
+                total += 790;
+            } else if (dish.equals("Codorniu")) {
+                total += 655;
+            } else if (dish.equals("Coca Cola")) {
+                total += 30;
+            } else if (dish.equals("Fanta")) {
+                total += 30;
+            } else if (dish.equals("Pepsi")) {
+                total += 30;
             }
-            // Add more conditions for other dishes if needed
+
         }
 
         String totalText = "Total: ";
