@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -52,13 +53,15 @@ public class check_out extends AppCompatActivity {
         customerName = findViewById(R.id.editTextCustomerName);
         customerAddress = findViewById(R.id.editTextCustomerAddress);
         customerContact = findViewById(R.id.editTextCustomerContact);
+        orderDetails = findViewById(R.id.orderDetails);
+
+        orderDetails.setMovementMethod(new ScrollingMovementMethod());
 
         totalAmount = findViewById(R.id.totalAmount);
 
         confirmButton = findViewById(R.id.confirmButton);
         confirmButton.setOnClickListener(view -> {
             // Handle confirm button click
-
             Intent nextIntent=new Intent(check_out.this, OrderConfirmed.class);
             startActivity(nextIntent);
 
@@ -95,8 +98,6 @@ public class check_out extends AppCompatActivity {
             });
 
         });
-
-        orderDetails = findViewById(R.id.orderDetails);
 
         Intent intent = getIntent();
         ArrayList<String> orderDishes = intent.getStringArrayListExtra("orderDishes");
