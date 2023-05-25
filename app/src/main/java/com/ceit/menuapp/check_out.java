@@ -50,9 +50,6 @@ public class check_out extends AppCompatActivity {
             startActivity(intent);
         });
 
-        customerName = findViewById(R.id.editTextCustomerName);
-        customerAddress = findViewById(R.id.editTextCustomerAddress);
-        customerContact = findViewById(R.id.editTextCustomerContact);
         orderDetails = findViewById(R.id.orderDetails);
 
         orderDetails.setMovementMethod(new ScrollingMovementMethod());
@@ -62,40 +59,8 @@ public class check_out extends AppCompatActivity {
         confirmButton = findViewById(R.id.confirmButton);
         confirmButton.setOnClickListener(view -> {
             // Handle confirm button click
-            Intent nextIntent=new Intent(check_out.this, OrderConfirmed.class);
+            Intent nextIntent=new Intent(check_out.this, customer_details.class);
             startActivity(nextIntent);
-
-            firestore = FirebaseFirestore.getInstance();
-
-            Intent intent = getIntent();
-            ArrayList<String> orderDishes = intent.getStringArrayListExtra("orderDishes");
-
-
-            Map<String, Object> orders =  new HashMap<>();
-
-            if (orderDishes != null) {
-                StringBuilder stringBuilder = new StringBuilder();
-                for (String dish : orderDishes) {
-                    stringBuilder.append(dish).append(", ");
-                }
-                orders.put("items", stringBuilder.toString());
-            }
-
-            orders.put("customer_name", customerName.getText().toString());
-            orders.put("customer_address", customerAddress.getText().toString());
-            orders.put("customer_contact", customerContact.getText().toString());
-
-            firestore.collection("orders").add(orders).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                @Override
-                public void onSuccess(DocumentReference documentReference) {
-                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
-                }
-            });
 
         });
 

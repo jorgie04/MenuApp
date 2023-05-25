@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class customer_details extends AppCompatActivity {
 
@@ -37,8 +38,17 @@ public class customer_details extends AppCompatActivity {
 
         confirm.setOnClickListener(view -> {
 
-            Intent intent = new Intent(customer_details.this, OrderConfirmed.class);
-            startActivity(intent);
+            String name = customerName.getText().toString().trim();
+            String address = customerAddress.getText().toString().trim();
+            String contact = customerContact.getText().toString().trim();
+
+            if (name.isEmpty() || address.isEmpty() || contact.isEmpty()) {
+                Toast.makeText(customer_details.this, "Please fill out all fields!", Toast.LENGTH_SHORT).show();
+            } else {
+                Intent intent = new Intent(customer_details.this, OrderConfirmed.class);
+                startActivity(intent);
+            }
+
         });
     }
 }
