@@ -21,4 +21,6 @@
     <string name="customer_contact">Customer Contact</string>
     <string name="customer_address">Customer Address</string>
     <string name="customer_name">Customer Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="email_addresss">Email Address</string>
 </resources>
